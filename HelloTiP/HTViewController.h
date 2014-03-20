@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface HTViewController : UIViewController
+@interface HTViewController : UIViewController <UITextFieldDelegate>
+
+/******** 1 ********/
+@property (strong, nonatomic) IBOutlet UITextField *textField;
+
+/******** 2 ********/
+-(IBAction)pressButton:(id)sender;
 
 @end

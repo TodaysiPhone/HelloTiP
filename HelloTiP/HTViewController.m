@@ -14,10 +14,40 @@
 
 @implementation HTViewController
 
-- (void)viewDidLoad
-{
+@synthesize textField;
+
+- (void)viewDidLoad {
+    
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    /******** 1 ********/
+    self.textField.delegate = self;
+
+}
+
+/******** 1 ********/
+-(IBAction)pressButton:(id)sender {
+    
+    /******** 2 ********/
+    NSString *textFieldText = textField.text;
+    
+    /******** 3 ********/
+    NSString *alertMessage = [NSString stringWithFormat:@"Hello, %@!", textFieldText];
+    
+    /******** 4 ********/
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Hello!" message:alertMessage delegate:nil cancelButtonTitle:@"Nice to meet you." otherButtonTitles:nil];
+    
+    /******** 5 ********/
+    [alertView show];
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.view endEditing:YES];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)aTextField {
+    [aTextField resignFirstResponder];
+    return NO;
 }
 
 - (void)didReceiveMemoryWarning

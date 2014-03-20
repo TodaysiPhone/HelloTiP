@@ -112,12 +112,11 @@
 		27ED401C18DB477800B29D34 /* HelloTiP */ = {
 			isa = PBXGroup;
 			children = (
+				27ED402818DB477800B29D34 /* Main.storyboard */,
 				27ED402518DB477800B29D34 /* HTAppDelegate.h */,
 				27ED402618DB477800B29D34 /* HTAppDelegate.m */,
-				27ED402818DB477800B29D34 /* Main.storyboard */,
 				27ED402B18DB477800B29D34 /* HTViewController.h */,
 				27ED402C18DB477800B29D34 /* HTViewController.m */,
-				27ED402E18DB477800B29D34 /* Images.xcassets */,
 				27ED401D18DB477800B29D34 /* Supporting Files */,
 			);
 			path = HelloTiP;
@@ -126,6 +125,7 @@
 		27ED401D18DB477800B29D34 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				27ED402E18DB477800B29D34 /* Images.xcassets */,
 				27ED401E18DB477800B29D34 /* HelloTiP-Info.plist */,
 				27ED401F18DB477800B29D34 /* InfoPlist.strings */,
 				27ED402218DB477800B29D34 /* main.m */,
