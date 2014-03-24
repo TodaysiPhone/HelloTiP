@@ -8,6 +8,9 @@
 
 #import "HTViewController.h"
 
+/******* 1 *******/
+#import <Social/Social.h>
+
 @interface HTViewController ()
 
 @end
@@ -25,20 +28,43 @@
 
 }
 
-/******** 1 ********/
+
 -(IBAction)pressButton:(id)sender {
+    
+
+    NSString *textFieldText = textField.text;
+    
+
+    NSString *alertMessage = [NSString stringWithFormat:@"Hello, %@!", textFieldText];
+    
+    /******** 1 ********/
+    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Hello!" message:alertMessage delegate:self cancelButtonTitle:@"Nice to meet you." otherButtonTitles:@"Share to Twitter", @"Share to Facebook", nil];
+    
+    
+    [alertView show];
+}
+
+/******** 1 ********/
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex {
     
     /******** 2 ********/
     NSString *textFieldText = textField.text;
+    NSString *alertMessage = [NSString stringWithFormat:@"Hello from %@'s iPhone app!", textFieldText];
     
     /******** 3 ********/
-    NSString *alertMessage = [NSString stringWithFormat:@"Hello, %@!", textFieldText];
+    if (buttonIndex == 1) {
+        SLComposeViewController *tweetSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        [tweetSheet setInitialText:alertMessage];
+        [self presentViewController:tweetSheet animated:YES completion:nil];
+    }
     
     /******** 4 ********/
-    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Hello!" message:alertMessage delegate:nil cancelButtonTitle:@"Nice to meet you." otherButtonTitles:nil];
+    else if (buttonIndex == 2) {
+        SLComposeViewController *postSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+        [postSheet setInitialText:alertMessage];
+        [self presentViewController:postSheet animated:YES completion:nil];
+    }
     
-    /******** 5 ********/
-    [alertView show];
 }
 
 /******** 1 ********/

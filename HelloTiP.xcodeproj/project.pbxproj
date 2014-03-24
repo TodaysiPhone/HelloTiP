@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2724EAAC18E0E62100204FF5 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2724EAAB18E0E62100204FF5 /* Social.framework */; };
 		27ED401718DB477800B29D34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27ED401618DB477700B29D34 /* Foundation.framework */; };
 		27ED401918DB477800B29D34 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27ED401818DB477800B29D34 /* CoreGraphics.framework */; };
 		27ED401B18DB477800B29D34 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27ED401A18DB477800B29D34 /* UIKit.framework */; };
@@ -34,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2724EAAB18E0E62100204FF5 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		27ED401318DB477700B29D34 /* HelloTiP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloTiP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27ED401618DB477700B29D34 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		27ED401818DB477800B29D34 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -60,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2724EAAC18E0E62100204FF5 /* Social.framework in Frameworks */,
 				27ED401918DB477800B29D34 /* CoreGraphics.framework in Frameworks */,
 				27ED401B18DB477800B29D34 /* UIKit.framework in Frameworks */,
 				27ED401718DB477800B29D34 /* Foundation.framework in Frameworks */,
@@ -101,6 +104,7 @@
 		27ED401518DB477700B29D34 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2724EAAB18E0E62100204FF5 /* Social.framework */,
 				27ED401618DB477700B29D34 /* Foundation.framework */,
 				27ED401818DB477800B29D34 /* CoreGraphics.framework */,
 				27ED401A18DB477800B29D34 /* UIKit.framework */,
@@ -457,6 +461,7 @@
 				27ED404718DB477800B29D34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		27ED404818DB477800B29D34 /* Build configuration list for PBXNativeTarget "HelloTiPTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +470,7 @@
 				27ED404A18DB477800B29D34 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 /******** 1 ********/
-@interface HTViewController : UIViewController <UITextFieldDelegate>
+@interface HTViewController : UIViewController <UITextFieldDelegate, UIAlertViewDelegate>
 
 /******** 2 ********/
 @property (strong, nonatomic) IBOutlet UITextField *textField;
